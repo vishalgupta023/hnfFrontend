@@ -9,7 +9,7 @@ const getActivities =async (user_id:string | null) =>{
         if(user_id){
           headers["x-user-id"] = user_id
         }
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/get-logs`,
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/v1/get-logs`,
                     {
                 method: "GET",
                 headers,

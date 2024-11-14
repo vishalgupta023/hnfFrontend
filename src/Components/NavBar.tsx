@@ -12,7 +12,7 @@ type Session = {
 
 async function getSessionDetails() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/auth/check-user-auth`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/v1/auth/check-user-auth`, {
       method: "GET",
       credentials: "include",
     });
@@ -40,7 +40,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       // Send a request to the backend to log out
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/auth/logout`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/v1/auth/logout`, {
         method: 'POST',
         credentials: 'include',  // Include cookies with the request
       });

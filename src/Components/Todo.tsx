@@ -22,7 +22,7 @@ const TodoPage = () => {
   // Fetch all todos from the backend API (you can adjust the API endpoint)
   const fetchTodos = async () => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/get-todos`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/v1/get-todos`, {
         method: "GET", 
         credentials: "include", // Include credentials (cookies) with the request
       });
@@ -45,7 +45,7 @@ const TodoPage = () => {
     };
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/add`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/v1/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -66,7 +66,7 @@ const TodoPage = () => {
   // Handle marking a Todo as completed
   const handleToggleCompletion = async (id: string) => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/${id}/toggle`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/v1/${id}/toggle`, {
         method: "PUT",
         credentials: "include", // Include credentials (cookies) with the request
       });
@@ -85,7 +85,7 @@ const TodoPage = () => {
   // Handle deleting a Todo
   const handleDeleteTodo = async (id: string) => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/${id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/v1/${id}`, {
         method: "DELETE",
         credentials: "include", // Include credentials (cookies) with the request
       });
