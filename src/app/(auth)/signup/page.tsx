@@ -21,7 +21,7 @@ const Signup = () => {
     }
   
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/v1/auth/signup`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/auth/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,8 +36,6 @@ const Signup = () => {
       }
   
       const data = await response.json();
-
-      console.log("data ",data)
   
       if (data.status !== 200) {
         throw new Error(data.message || 'Something went wrong');

@@ -26,7 +26,7 @@ const getActivities = async (user_id: string | null, currentPage: number, limit:
     }
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}api/v1/get-all-logs?page=${currentPage}&limit=${limit}`, 
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/get-all-logs?page=${currentPage}&limit=${limit}`, 
       {
         method: "GET",
         headers,

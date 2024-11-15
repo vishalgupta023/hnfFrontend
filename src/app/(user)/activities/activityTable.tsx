@@ -21,7 +21,7 @@ export default function ActivityTable({ activities }: Props) {
     const router =useRouter();
   const handleDeleteActivity = async (id: string) => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/v1/delete-log/${id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/delete-log/${id}`, {
         method: "DELETE",
         credentials : "include"
       });
