@@ -21,7 +21,7 @@ const Signup = () => {
     }
   
     try {
-      const response = await fetch(`https://hnfbackend-production.up.railway.app/api/v1/auth/signup`, {
+      const response = await fetch(`https://hnfbackend-production.up.railway.appapi/v1/auth/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
